@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ai-image-generator:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - AZURE_GENAI_ENDPOINT=${AZURE_GENAI_ENDPOINT}
+      - AZURE_GENAI_KEY=${AZURE_GENAI_KEY}
+      - AZURE_DEPLOYMENT_NAME=${AZURE_DEPLOYMENT_NAME}
+    volumes:
+      - ./app:/app
+    restart: unless-stopped
