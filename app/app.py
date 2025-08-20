@@ -33,7 +33,7 @@ def index():
         try:
             client = get_azure_client()
             response = client.images.generate(
-                deployment_name=os.getenv("AZURE_DEPLOYMENT_NAME", "dall-e-3"),
+                deployment_name="dall-e-3",
                 prompt=prompt,
                 size=size,
                 n=1,
