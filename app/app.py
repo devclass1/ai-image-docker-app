@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 # Initialize Azure client
 def get_azure_client():
-    endpoint = os.getenv("AZURE_GENAI_ENDPOINT")
-    key = os.getenv("AZURE_GENAI_KEY")
+    endpoint = "https://project20aug2025.openai.azure.com/"
+    key = "CXHLwVOtogrGhr5jv2hztjoLY1f0Tlytl0Auidf27tgSYtOU9UCPJQQJ99BHACYeBjFXJ3w3AAAAACOGA2cm"
     
     if not endpoint or not key:
         raise ValueError("Azure Gen AI endpoint and key must be configured")
